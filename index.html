@@ -20,7 +20,7 @@
             var startTime2 = new Date().getTime();
             var img2 = new Image();
             img2.onload = function() {
-                var loadtime = new Date().getTime() - startTime;
+                var loadtime = new Date().getTime() - startTime2;
                 //alert("image 2 took " + loadtime + "ms to load");
                 document.getElementById("ssl-time").textContent=loadtime;
             };
