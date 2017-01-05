@@ -6,21 +6,24 @@
       <h1>Smart Speed Test</h1>
 
       <script type="text/javascript">
+        var date = new Date();
         var startTime = new Date().getTime();
         var img = new Image();
-        img.onload = function() {
+        img.load = function() {
             var loadtime = new Date().getTime() - startTime;
             alert("image 1 took " + loadtime + "ms to load");
         };
-        img.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png";
+        img.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?" + date.getTime + date.;
 
+
+        var date2 = new Date();
         var startTime2 = new Date().getTime();
         var img2 = new Image();
-        img2.onload = function() {
+        img2.load = function() {
             var loadtime = new Date().getTime() - startTime;
             alert("image 2 took " + loadtime + "ms to load");
         };
-        img2.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png";
+        img2.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?";
 
       </script>
     </body>
