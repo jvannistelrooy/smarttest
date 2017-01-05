@@ -13,7 +13,7 @@
             var loadtime = new Date().getTime() - startTime;
             alert("image 1 took " + loadtime + "ms to load");
         };
-        img.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?" + date.getTime + date.;
+        img.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?no-ssl-" + date.getTime();
 
 
         var date2 = new Date();
@@ -23,7 +23,7 @@
             var loadtime = new Date().getTime() - startTime;
             alert("image 2 took " + loadtime + "ms to load");
         };
-        img2.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?";
+        img2.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?ssl-" + date.getTime();
 
       </script>
     </body>
