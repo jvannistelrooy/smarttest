@@ -4,14 +4,17 @@
     </head>
     <body>
       <h1>Smart Speed Test</h1>
+      <div>No-SSL image loaded in: <span id="no-ssl-time">...</span>ms</div>
+      <div>SSL image loaded in: <span id="ssl-time">...</span>ms</div>
 
       <script type="text/javascript">
         var date = new Date();
         var startTime = new Date().getTime();
         var img = new Image();
-        img.load = function() {
+        img.onload = function() {
             var loadtime = new Date().getTime() - startTime;
-            alert("image 1 took " + loadtime + "ms to load");
+            //alert("image 1 took " + loadtime + "ms to load");
+            document.getElementById("no-ssl-time").textContent=loadtime;
         };
         img.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?no-ssl-" + date.getTime();
 
@@ -19,9 +22,10 @@
         var date2 = new Date();
         var startTime2 = new Date().getTime();
         var img2 = new Image();
-        img2.load = function() {
+        img2.onload = function() {
             var loadtime = new Date().getTime() - startTime;
-            alert("image 2 took " + loadtime + "ms to load");
+            //alert("image 2 took " + loadtime + "ms to load");
+            document.getElementById("ssl-time").textContent=loadtime;
         };
         img2.src = "https://jvannistelrooy.github.io/smarttest/largeimage.png?ssl-" + date.getTime();
 
