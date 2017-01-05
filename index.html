@@ -15,19 +15,19 @@
             var loadtime = new Date().getTime() - startTime;
             //alert("image 1 took " + loadtime + "ms to load");
             document.getElementById("no-ssl-time").textContent=loadtime;
+
+            var date2 = new Date();
+            var startTime2 = new Date().getTime();
+            var img2 = new Image();
+            img2.onload = function() {
+                var loadtime = new Date().getTime() - startTime;
+                //alert("image 2 took " + loadtime + "ms to load");
+                document.getElementById("ssl-time").textContent=loadtime;
+            };
+            img2.src = "https://jvannistelrooy.github.io/smarttest/largeimage.png?ssl-" + date.getTime();
+
         };
         img.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png?no-ssl-" + date.getTime();
-
-
-        var date2 = new Date();
-        var startTime2 = new Date().getTime();
-        var img2 = new Image();
-        img2.onload = function() {
-            var loadtime = new Date().getTime() - startTime;
-            //alert("image 2 took " + loadtime + "ms to load");
-            document.getElementById("ssl-time").textContent=loadtime;
-        };
-        img2.src = "https://jvannistelrooy.github.io/smarttest/largeimage.png?ssl-" + date.getTime();
 
       </script>
     </body>
