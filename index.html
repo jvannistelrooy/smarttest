@@ -10,9 +10,17 @@
         var img = new Image();
         img.onload = function() {
             var loadtime = new Date().getTime() - startTime;
-            alert("image took " + loadtime + "ms to load");
+            alert("image 1 took " + loadtime + "ms to load");
         };
         img.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png";
+
+        var startTime2 = new Date().getTime();
+        var img2 = new Image();
+        img2.onload = function() {
+            var loadtime = new Date().getTime() - startTime;
+            alert("image 2 took " + loadtime + "ms to load");
+        };
+        img2.src = "http://jvannistelrooy.github.io/smarttest/largeimage.png";
 
       </script>
     </body>
